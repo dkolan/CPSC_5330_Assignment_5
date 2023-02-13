@@ -105,7 +105,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CurrencyConverter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYT-XA-41a">
-                                <rect key="frame" x="124" y="59.000000000000007" width="145.33333333333337" height="20.333333333333336"/>
+                                <rect key="frame" x="124.00000000000001" y="59.000000000000007" width="145.33333333333337" height="20.333333333333336"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -122,6 +122,9 @@
                             <constraint firstItem="dmm-7N-ZbV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="jiV-af-XOm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="orS-mM-uhA" kind="presentation" id="wEU-Y2-3eX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -132,20 +135,20 @@
             <objects>
                 <viewController id="orS-mM-uhA" customClass="ConvertedCurrencyView" customModule="CurrencyConverter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I9z-Af-ZAT">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="F8F-43-65W">
-                                <rect key="frame" x="30" y="64" width="333" height="724"/>
+                                <rect key="frame" x="30" y="30" width="333" height="723"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount in USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sld-x3-edq">
-                                        <rect key="frame" x="108.33333333333334" y="0.0" width="116.33333333333334" height="522.66666666666663"/>
+                                        <rect key="frame" x="108.33333333333334" y="0.0" width="116.33333333333334" height="521.66666666666663"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="RUw-Gq-efX">
-                                        <rect key="frame" x="77" y="552.66666666666663" width="179" height="20.333333333333371"/>
+                                        <rect key="frame" x="77" y="551.66666666666663" width="179" height="20.333333333333371"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iHd-OL-0as">
                                                 <rect key="frame" x="0.0" y="0.0" width="82" height="20.333333333333332"/>
@@ -162,7 +165,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Xxw-J6-eDE">
-                                        <rect key="frame" x="74.666666666666686" y="603" width="183.66666666666663" height="20.333333333333371"/>
+                                        <rect key="frame" x="74.666666666666671" y="602" width="183.66666666666663" height="20.333333333333371"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NNN-bR-vm3">
                                                 <rect key="frame" x="0.0" y="0.0" width="84.333333333333329" height="20.333333333333332"/>
@@ -179,7 +182,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="vvp-1s-DXn">
-                                        <rect key="frame" x="74.333333333333314" y="653.33333333333337" width="184.33333333333337" height="20.333333333333371"/>
+                                        <rect key="frame" x="74.333333333333329" y="652.33333333333337" width="184.33333333333337" height="20.333333333333371"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2a-2k-fSG">
                                                 <rect key="frame" x="0.0" y="0.0" width="84.666666666666671" height="20.333333333333332"/>
@@ -196,7 +199,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Yll-r2-klU">
-                                        <rect key="frame" x="74" y="703.66666666666663" width="185" height="20.333333333333371"/>
+                                        <rect key="frame" x="74" y="702.66666666666663" width="185" height="20.333333333333371"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fhh-WS-KI8">
                                                 <rect key="frame" x="0.0" y="0.0" width="85" height="20.333333333333332"/>
