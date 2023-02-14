@@ -10,11 +10,19 @@ import UIKit
 class ConvertedCurrencyView: UIViewController {
 
     @IBOutlet weak var usdAmount: UILabel!
-    @IBOutlet weak var euroAmount: UILabel!
-    @IBOutlet weak var poundAmount: UILabel!
-    @IBOutlet weak var yenAmount: UILabel!
-    @IBOutlet weak var canadianAmount: UILabel!
     
+    @IBOutlet weak var euroLabel: UILabel!
+    @IBOutlet weak var euroAmount: UILabel!
+    
+    @IBOutlet weak var poundLabel: UILabel!
+    @IBOutlet weak var poundAmount: UILabel!
+
+    @IBOutlet weak var yenLabel: UILabel!
+    @IBOutlet weak var yenAmount: UILabel!
+
+    @IBOutlet weak var cadDollarLabel: UILabel!
+    @IBOutlet weak var canadianAmount: UILabel!
+
     var usd : Double = 0
     var euros : Double = 0
     var pounds : Double = 0
@@ -25,10 +33,18 @@ class ConvertedCurrencyView: UIViewController {
         super.viewDidLoad()
 
         usdAmount.text = "Amount in USD: " + String(format: "%.2f", usd)
-        euroAmount.text = String(format: "%.2f", euros)
-        poundAmount.text = String(format: "%.2f", pounds)
-        yenAmount.text = String(format: "%.2f", yen)
-        canadianAmount.text = String(format: "%.2f", cadDollars)
+        
+        euroAmount.text = euros != -1 ? String(format: "%.2f", euros) : hideDisabledCurrency(euroLabel, euroAmount)
+        poundAmount.text = pounds != -1 ? String(format: "%.2f", pounds) : hideDisabledCurrency(poundLabel, poundAmount)
+        yenAmount.text = yen != -1 ? String(format: "%.2f", yen) : hideDisabledCurrency(yenLabel, yenAmount)
+        canadianAmount.text = cadDollars != -1 ? String(format: "%.2f", cadDollars) : hideDisabledCurrency(cadDollarLabel, canadianAmount)
+    }
+    
+    func hideDisabledCurrency(_ currencyLabel : UILabel, _ amountLabel : UILabel) -> String {
+        currencyLabel.isHidden = true
+        amountLabel.isHidden = true
+        
+        return ""
     }
     
 

@@ -237,11 +237,15 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cadDollarLabel" destination="Fhh-WS-KI8" id="Eav-5V-UUl"/>
                         <outlet property="canadianAmount" destination="Bj4-ad-9Xd" id="YDl-9X-2yB"/>
                         <outlet property="euroAmount" destination="v9p-2n-l2C" id="Sky-tv-ZQ5"/>
+                        <outlet property="euroLabel" destination="iHd-OL-0as" id="JFP-uo-Z86"/>
                         <outlet property="poundAmount" destination="Ce0-TL-0Zv" id="sr3-ZD-V12"/>
+                        <outlet property="poundLabel" destination="NNN-bR-vm3" id="LfW-7B-H07"/>
                         <outlet property="usdAmount" destination="sld-x3-edq" id="Qap-iU-qE6"/>
                         <outlet property="yenAmount" destination="Rcp-ZP-x50" id="ISa-t7-nsk"/>
+                        <outlet property="yenLabel" destination="A2a-2k-fSG" id="fNf-V1-Hsx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eAG-qW-5dr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

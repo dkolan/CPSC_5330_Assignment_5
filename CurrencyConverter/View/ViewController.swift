@@ -34,19 +34,27 @@ class ViewController: UIViewController {
         usd = usdInput
         print(usd)
         
-        if euroSwitch.isOn {
-            euros = currencyLogic.convertToEuro(usdInput)
-        }
-        if poundSwitch.isOn {
-            pounds = currencyLogic.convertToSterling(usdInput)
-        }
-        if yenSwitch.isOn {
-            yen = currencyLogic.convertToJapaneseYen(usdInput)
-        }
-        if canadianDollarSwitch.isOn {
-            cadDollars = currencyLogic.convertToCanadian(usdInput)
-        }
+//        if euroSwitch.isOn {
+//            euros = currencyLogic.convertToEuro(usdInput)
+//        }
+//
+//        if poundSwitch.isOn {
+//            pounds = currencyLogic.convertToSterling(usdInput)
+//        }
+//
+//        if yenSwitch.isOn {
+//            yen = currencyLogic.convertToJapaneseYen(usdInput)
+//        }
+//
+//        if canadianDollarSwitch.isOn {
+//            cadDollars = currencyLogic.convertToCanadian(usdInput)
+//        }
         
+        euros = euroSwitch.isOn ? currencyLogic.convertToEuro(usdInput) : -1
+        pounds = poundSwitch.isOn ? currencyLogic.convertToSterling(usdInput) : -1
+        yen = yenSwitch.isOn ? currencyLogic.convertToJapaneseYen(usdInput) : -1
+        cadDollars = canadianDollarSwitch.isOn ? currencyLogic.convertToCanadian(usdInput) : -1
+
         self.performSegue(withIdentifier: "toConverted", sender: self)
     }
     
