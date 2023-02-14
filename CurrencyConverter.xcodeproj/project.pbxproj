@@ -14,6 +14,7 @@
 		4218EC7E299A04CC00602DA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4218EC7D299A04CC00602DA6 /* Assets.xcassets */; };
 		4218EC81299A04CC00602DA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4218EC7F299A04CC00602DA6 /* LaunchScreen.storyboard */; };
 		4218EC89299A10E800602DA6 /* ConvertedCurrencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4218EC88299A10E800602DA6 /* ConvertedCurrencyView.swift */; };
+		4239BD3B299B3A8B000B284A /* CurrencyLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4239BD3A299B3A8B000B284A /* CurrencyLogic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		4218EC80299A04CC00602DA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4218EC82299A04CC00602DA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4218EC88299A10E800602DA6 /* ConvertedCurrencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertedCurrencyView.swift; sourceTree = "<group>"; };
+		4239BD3A299B3A8B000B284A /* CurrencyLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyLogic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +60,33 @@
 		4218EC73299A04CB00602DA6 /* CurrencyConverter */ = {
 			isa = PBXGroup;
 			children = (
+				4239BD39299AED8F000B284A /* View */,
+				4239BD38299AED7A000B284A /* Model */,
 				4218EC74299A04CB00602DA6 /* AppDelegate.swift */,
 				4218EC76299A04CB00602DA6 /* SceneDelegate.swift */,
-				4218EC78299A04CB00602DA6 /* ViewController.swift */,
 				4218EC7A299A04CB00602DA6 /* Main.storyboard */,
 				4218EC7D299A04CC00602DA6 /* Assets.xcassets */,
 				4218EC7F299A04CC00602DA6 /* LaunchScreen.storyboard */,
 				4218EC82299A04CC00602DA6 /* Info.plist */,
-				4218EC88299A10E800602DA6 /* ConvertedCurrencyView.swift */,
 			);
 			path = CurrencyConverter;
+			sourceTree = "<group>";
+		};
+		4239BD38299AED7A000B284A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4239BD3A299B3A8B000B284A /* CurrencyLogic.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4239BD39299AED8F000B284A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4218EC78299A04CB00602DA6 /* ViewController.swift */,
+				4218EC88299A10E800602DA6 /* ConvertedCurrencyView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +164,7 @@
 				4218EC75299A04CB00602DA6 /* AppDelegate.swift in Sources */,
 				4218EC89299A10E800602DA6 /* ConvertedCurrencyView.swift in Sources */,
 				4218EC77299A04CB00602DA6 /* SceneDelegate.swift in Sources */,
+				4239BD3B299B3A8B000B284A /* CurrencyLogic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
