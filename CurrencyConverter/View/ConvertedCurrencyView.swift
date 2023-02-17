@@ -9,6 +9,7 @@ import UIKit
 
 class ConvertedCurrencyView: UIViewController {
 
+    @IBOutlet weak var usdLabel: UILabel!
     @IBOutlet weak var usdAmount: UILabel!
     
     @IBOutlet weak var euroLabel: UILabel!
@@ -32,7 +33,7 @@ class ConvertedCurrencyView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        usdAmount.text = "Amount in USD: " + String(format: "%.2f", usd)
+        usdAmount.text = String(format: "%.2f", usd)
         
         euroAmount.text = euros != -1 ? String(format: "%.2f", euros) : hideDisabledCurrency(euroLabel, euroAmount)
         poundAmount.text = pounds != -1 ? String(format: "%.2f", pounds) : hideDisabledCurrency(poundLabel, poundAmount)
@@ -48,6 +49,9 @@ class ConvertedCurrencyView: UIViewController {
     }
     
 
+    @IBAction func closeModalBtn(_ sender: Any) {
+        dismiss(animated: true)
+    }
     /*
     // MARK: - Navigation
 

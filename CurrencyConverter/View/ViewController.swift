@@ -32,23 +32,6 @@ class ViewController: UIViewController {
         let usdInput : Double  = Double(amountInput.text ?? "0" ) ?? 0
         
         usd = usdInput
-        print(usd)
-        
-//        if euroSwitch.isOn {
-//            euros = currencyLogic.convertToEuro(usdInput)
-//        }
-//
-//        if poundSwitch.isOn {
-//            pounds = currencyLogic.convertToSterling(usdInput)
-//        }
-//
-//        if yenSwitch.isOn {
-//            yen = currencyLogic.convertToJapaneseYen(usdInput)
-//        }
-//
-//        if canadianDollarSwitch.isOn {
-//            cadDollars = currencyLogic.convertToCanadian(usdInput)
-//        }
         
         euros = euroSwitch.isOn ? currencyLogic.convertToEuro(usdInput) : -1
         pounds = poundSwitch.isOn ? currencyLogic.convertToSterling(usdInput) : -1
