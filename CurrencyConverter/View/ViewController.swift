@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var amountInput: UITextField!
     
@@ -25,6 +25,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        amountInput.keyboardType = .numberPad
+        amountInput.delegate = self
         // Do any additional setup after loading the view.
     }
 
@@ -52,6 +54,14 @@ class ViewController: UIViewController {
             navigation.yen = yen
             navigation.cadDollars = cadDollars
         }
+    }
+    
+    // Restricts amountInput entry to only integer chars
+    func textField(_ textField: UITextField,
+      shouldChangeCharactersIn range: NSRange,
+      replacementString string: String) -> Bool {  let invalidCharacters =
+        CharacterSet(charactersIn: "0123456789").inverted
+        return (string.rangeOfCharacter(from: invalidCharacters) == nil)
     }
 }
 
