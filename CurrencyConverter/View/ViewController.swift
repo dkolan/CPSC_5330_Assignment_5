@@ -31,7 +31,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func convert(_ sender: Any) {
-        let usdInput : Double  = Double(amountInput.text ?? "0" ) ?? 0
+        // Sets invalid input to 0
+//        let usdInput : Double  = Double(amountInput.text ?? "0" ) ?? 0
+        
+        guard let usdInput = Double (amountInput.text ?? "0") else {
+            showInvalidInputAlert()
+            return
+        }
         
         usd = usdInput
         
@@ -63,5 +69,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
         CharacterSet(charactersIn: "0123456789").inverted
         return (string.rangeOfCharacter(from: invalidCharacters) == nil)
     }
+    
+    func showInvalidInputAlert() {
+        let alert = UIAlertController(
+            title: "Invalid input",
+            message: "Amount must be comprised of integer numerals.",
+            preferredStyle: UIAlertController.Style.alert)
+
+        alert.addAction(UIAlertAction(
+            title: "Go Back",
+            style: UIAlertAction.Style.default,
+            handler: { _ in
+              //Cancel Action
+          }))
+          self.present(alert, animated: true, completion: nil)
+      }
 }
 
